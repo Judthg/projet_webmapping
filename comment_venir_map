@@ -22,7 +22,8 @@
           });
 		  
 		map.on("load", function() {
-		//Couche EPCI
+		
+		//villes historiques
 		 map.addSource('villes', {
             type: 'geojson',
             data: 'https://raw.githubusercontent.com/Judthg/projet_webmapping/main/villes-historiques-de-bretagne.geojson'
