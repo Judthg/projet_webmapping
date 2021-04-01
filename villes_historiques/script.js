@@ -1,3 +1,13 @@
+// pour que la fonction .remove() fonctionne avec les anciens navigateurs
+if (!('remove' in Element.prototype)) {
+    Element.prototype.remove = function() {
+      if (this.parentNode) {
+        this.parentNode.removeChild(this);
+      }
+    };
+}
+  
+
 // Ajout du fond de carte
 
 var map = new mapboxgl.Map({
@@ -253,38 +263,46 @@ villes.features.forEach(function(ville, i){
 // Fonction qui construit la liste des villes
 function buildLocationList(data) {
     data.features.forEach(function(ville, i){
-      /**
-       * Create a shortcut for `store.properties`,
-       * which will be used several times below.
-      **/
-      var prop = ville.properties;
-  
-      /* Add a new listing section to the sidebar. */
-      var listings = document.getElementById('listings');
-      var listing = listings.appendChild(document.createElement('div'));
-      /* Assign a unique `id` to the listing. */
-      listing.id = "listing-" + data.features[i].properties.id;
-      /* Assign the `item` class to each listing for styling. */
-      listing.className = 'item';
-  
-      /* Add the link to the individual listing created above. */
-      var link = listing.appendChild(document.createElement('a'));
-      link.href = '#';
-      link.className = 'title';
-      link.id = "link-" + prop.id;
-      link.innerHTML = prop.nom;
-  
-      /* Add details to the individual listing. */
-      var details = listing.appendChild(document.createElement('div'));
-      details.innerHTML = prop.code_insee;
-      /*if (prop.phone) {
-        details.innerHTML += ' · ' + prop.phoneFormatted;
-      }
-      if (prop.distance) {
-        var roundedDistance = Math.round(prop.distance * 100) / 100;
-        details.innerHTML +=
-          '<p><strong>' + roundedDistance + ' miles away</strong></p>';
-      }*/
+        /**
+         * Create a shortcut for `store.properties`,
+         * which will be used several times below.
+         **/
+        var prop = ville.properties;
+
+        /* Add a new listing section to the sidebar. */
+        var listings = document.getElementById('listings');
+        var listing = listings.appendChild(document.createElement('div'));
+        /* Assign a unique `id` to the listing. */
+        listing.id = "listing-" + data.features[i].properties.id;
+        /* Assign the `item` class to each listing for styling. */
+        listing.className = 'item';
+
+        /* Add the link to the individual listing created above. */
+        var link = listing.appendChild(document.createElement('a'));
+        link.href = '#';
+        link.className = 'title';
+        link.id = "link-" + prop.id;
+        link.innerHTML = prop.nom;
+
+        /* Add details to the individual listing. */
+        var details = listing.appendChild(document.createElement('div'));
+        details.innerHTML = prop.code_insee;
+
+        // EventListener (réponse au clic)
+        link.addEventListener('click', function(e){
+        for (var i = 0; i < data.features.length; i++) {
+            if (this.id === "link-" + data.features[i].properties.id) {
+                var clickedListing = data.features[i];
+                flyToVille(clickedListing);
+                //createPopUp(clickedListing);
+            }
+        }  
+        var activeItem = document.getElementsByClassName('active');
+        if (activeItem[0]) {
+            activeItem[0].classList.remove('active');
+        }
+        this.parentNode.classList.add('active');
+        });
     });
 }
 
@@ -343,10 +361,12 @@ map.on('mousemove', function(e) {
 })
 
 
-
-function flyToStore(currentFeature) {
+// Fonction pour zoomer sur les villes
+function flyToVille(currentFeature) {
     map.flyTo({
       center: currentFeature.geometry.coordinates,
       zoom: 15
     });
 }
+
+
