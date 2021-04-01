@@ -33,7 +33,7 @@
   gets 2/3 of the page. You can adjust this to your personal liking. */
   .sidebar {
     position: absolute;
-    width: 33.3333%;
+    width: 25%;
     height: 100%;
     top: 0;
     left: 0;
@@ -43,8 +43,8 @@
 
   .map {
     position: absolute;
-    left: 33.3333%;
-    width: 66.6666%;
+    left: 25%;
+    width: 75%;
     top: 0;
     bottom: 0;
   }
@@ -74,14 +74,14 @@
   
   .listings .item .title {
     display: block;
-    color: #00853e;
+    color: #000000;
     font-weight: 700;
   }
   
   .listings .item .title small { font-weight: 400; }
   
   .listings .item.active .title,
-  .listings .item .title:hover { color: #8cc63f; }
+  .listings .item .title:hover { color: #C5C5C5; }
   
   .listings .item.active {
     background-color: #f8f8f8;
@@ -99,7 +99,7 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #00853e;
+    background: #000000;
     border-radius: 0;
   }
   

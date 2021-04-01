@@ -14,7 +14,7 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://geoserveis.icgc.cat/contextmaps/positron.json',
     center: [-2.8816178480265826, 48.27287617786766],
-    zoom: 8
+    zoom: 7.2
 });
 
 
@@ -260,6 +260,7 @@ villes.features.forEach(function(ville, i){
     ville.properties.id = i;
 });
 
+
 // Fonction qui construit la liste des villes
 function buildLocationList(data) {
     data.features.forEach(function(ville, i){
@@ -326,7 +327,7 @@ map.on('load', function () {
         'type': 'circle',
         'source': 'villes',
         'paint': {
-            'circle-color': 'blue',
+            'circle-color': 'black',
             'circle-opacity': 0.9
         }
     });
@@ -361,7 +362,7 @@ map.on('mousemove', function(e) {
 })
 
 
-// Fonction pour zoomer sur les villes
+// Fonction pour zoomer sur les villes via la sidebar
 function flyToVille(currentFeature) {
     map.flyTo({
       center: currentFeature.geometry.coordinates,
@@ -369,4 +370,27 @@ function flyToVille(currentFeature) {
     });
 }
 
+// zoom au clic sur la carte
+map.on('click', function(e) {
+  /* Determine if a feature in the "locations" layer exists at that point. */
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['villes']
+  });
+  /* If yes, then: */
+  if (features.length) {
+    var clickedPoint = features[0];
+    
+    /* Fly to the point */
+    flyToVille(clickedPoint);
+}});
+
+
+//Boutons navigation
+var nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'top-right');
+		
+//Echelle cartographique
+map.addControl(new mapboxgl.ScaleControl({
+		maxWidth: 120,
+		unit: 'metric'}));
 
