@@ -14,7 +14,8 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://geoserveis.icgc.cat/contextmaps/positron.json',
     center: [-2.8816178480265826, 48.27287617786766],
-    zoom: 7.2
+    zoom: 7.2,
+	minZoom: 6.5
 });
 
 
