@@ -665,7 +665,8 @@ map.addControl(nav, 'top-right');
 map.addControl(new mapboxgl.ScaleControl({
 		maxWidth: 120,
 		unit: 'metric'}));
-
+		
+//Retour au zoom initial
 document.getElementById('fly').addEventListener('click', function () {
 	// Fly to a random location by offsetting the point -74.50, 40
 	// by up to 5 degrees.
