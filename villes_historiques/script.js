@@ -6,7 +6,6 @@ if (!('remove' in Element.prototype)) {
       }
     };
 }
-  
 
 // Ajout du fond de carte
 
@@ -667,3 +666,12 @@ map.addControl(new mapboxgl.ScaleControl({
 		maxWidth: 120,
 		unit: 'metric'}));
 
+document.getElementById('fly').addEventListener('click', function () {
+	// Fly to a random location by offsetting the point -74.50, 40
+	// by up to 5 degrees.
+	map.flyTo({
+	center: [-2.8816178480265826, 48.27287617786766],
+	zoom: 7.2,
+	essential: true // this animation is considered essential with respect to prefers-reduced-motion
+	});
+});
