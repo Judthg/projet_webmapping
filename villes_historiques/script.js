@@ -1006,7 +1006,7 @@ map.on('load', function () {
             'circle-color': 'green',
             'circle-opacity': 0.9
         },
-		'minzoom': 12
+		'minzoom': 11
     });
 	
 
@@ -1028,7 +1028,8 @@ map.on('load', function () {
         'paint': {
             'circle-color': 'black',
             'circle-opacity': 0.9
-        }
+        },
+		'maxzoom': 11
     });
 
     buildLocationList(villes);
@@ -1065,7 +1066,7 @@ map.on('mousemove', function(e) {
 function flyToVille(currentFeature) {
     map.flyTo({
       center: currentFeature.geometry.coordinates,
-      zoom: 15
+      zoom: 12
     });
 }
 
