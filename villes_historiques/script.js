@@ -575,7 +575,7 @@ map.on('load', function () {
         'type': 'circle',
         'source': 'immeubles',
         'paint': {
-            'circle-color': 'green',
+            'circle-color': '#707070',
             'circle-opacity': 0.9
         },
 		'minzoom': 11
@@ -629,6 +629,30 @@ map.on('mousemove', function(e) {
     var feature = features[0];
         popup.setLngLat(feature.geometry.coordinates)
           .setHTML('<b>'+ feature.properties.nom + '</b>' + '<hr>'+ feature.properties.code_insee + '</hr>')
+        .addTo(map);
+
+})
+
+// Hover immeubles historiques
+var popupim = new mapboxgl.Popup({
+    className: "Mypopup",
+    closeButton: false,
+    closeOnClick: false 
+});
+
+map.on('mousemove', function(e) {
+    var features2 = map.queryRenderedFeatures(e.point, { layers: ['immeubles'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features2.length) ? 'pointer' : '';
+
+    if (!features2.length) {
+        popup.remove();
+        return; 
+    }
+ 
+    var feature2 = features2[0];
+        popup.setLngLat(feature2.geometry.coordinates)
+          .setHTML('<b>'+ feature2.properties.tico + '</b>' + '<hr>'+ feature2.properties.dpro + '</hr>')
         .addTo(map);
 
 })
