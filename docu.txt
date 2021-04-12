@@ -1,0 +1,9 @@
+positionnement div
+https://www.pierre-giraud.com/html-css-apprendre-coder-cours/position/#:~:text=Notre%20div%20vert%20va%20donc,bord%20droit%20de%20son%20parent.
+https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-site-web-en-CSS.html 
+
+sidebar qui apparait / disparait
+https://stackoverflow.com/questions/54642804/adding-collapsible-sidebar-to-mapbox-map 
+
+mapbox gl js tutoriel marker change
+https://docs.mapbox.com/help/tutorials/building-a-store-locator/

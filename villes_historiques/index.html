@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Store Locator</title>
+        <title>Villes historiques de Bretagne</title>
         <script src="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.js"></script>
         <link href="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.css" rel="stylesheet" />    
         
@@ -10,7 +10,16 @@
 	    <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
-        <div id="map"></div>
+
+        <div class="sidebar">
+            <div class="heading">
+              <h1>Villes historiques de Bretagne</h1>
+            </div>
+            <div id="listings" class="listings"></div>
+        </div>
+        <div id="map" class="map"></div>
+		<button id="fly">Retour à l'échelle régionale</button>
+
         <script src="script.js"></script>
     </body>
 </html>
