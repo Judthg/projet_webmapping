@@ -260,6 +260,9 @@ villes.features.forEach(function(ville, i){
     ville.properties.id = i;
 });
 
+// Eventlistener (zoom quand clic sur ville)
+
+
 // Fonction qui construit la liste des villes
 function buildLocationList(data) {
     data.features.forEach(function(ville, i){
