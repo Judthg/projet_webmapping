@@ -9,9 +9,9 @@ var map = new mapboxgl.Map({
 
 
 // Ajout des données
-var villes = 'https://raw.githubusercontent.com/Judthg/projet_webmapping/main/villes-historiques-de-bretagne.geojson'
 
 map.on('load', function () {
+
 
     // Ajout villes historiques de bretagne
 
@@ -21,7 +21,7 @@ map.on('load', function () {
             type: 'geojson',
 
             // GeoJSON hébergé sur GitHub
-            data: villes
+            data: 'https://raw.githubusercontent.com/Judthg/projet_webmapping/main/villes-historiques-de-bretagne.geojson'
             
         }
     );
