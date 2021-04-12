@@ -628,7 +628,7 @@ map.on('mousemove', function(e) {
  
     var feature = features[0];
         popup.setLngLat(feature.geometry.coordinates)
-          .setHTML('<b>'+ feature.properties.nom + '</b>' + '<hr>'+ feature.properties.code_insee + '</hr>')
+          .setHTML('<b>'+ feature.properties.nom + '</b>' )
         .addTo(map);
 
 })
@@ -690,6 +690,8 @@ map.addControl(new mapboxgl.ScaleControl({
 		maxWidth: 120,
 		unit: 'metric'}));
 		
+        
+        
 //Retour au zoom initial
 document.getElementById('fly').addEventListener('click', function () {
 	// Fly to a random location by offsetting the point -74.50, 40
