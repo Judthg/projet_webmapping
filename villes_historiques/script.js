@@ -578,6 +578,7 @@ map.on('load', function () {
             'circle-color': '#707070',
             'circle-opacity': 0.9
         },
+        'layout': {'visibility': 'visible'},
 		'minzoom': 11
     });
 	
