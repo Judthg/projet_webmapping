@@ -646,7 +646,7 @@ map.on('mousemove', function(e) {
     map.getCanvas().style.cursor = (features2.length) ? 'pointer' : '';
 
     if (!features2.length) {
-        popup.remove();
+        popupim.remove();
         return; 
     }
  
