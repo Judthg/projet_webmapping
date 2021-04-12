@@ -583,14 +583,7 @@ map.on('load', function () {
 	
 
     // Ajout villes historiques de bretagne
-    // Add an image to use as a custom marker
-    map.loadImage(
-        'https://www.flaticon.com/svg/vstatic/svg/3169/3169549.svg?token=exp=1617200356~hmac=40aa51d5300950fe9f738ccf9f623bad',
-        function (error, image) {
-            if (error) throw error;
-            map.addImage('custom-marker', image);
 
-<<<<<<< Updated upstream
     map.addSource(
         'villes',
         {
@@ -626,30 +619,6 @@ function closeNav() {
 }
 
 
-=======
-        map.addSource(
-            'villes',
-            {
-                type: 'geojson',
-
-                // GeoJSON hébergé sur GitHub
-                data: 'https://raw.githubusercontent.com/Judthg/projet_webmapping/main/villes-historiques-de-bretagne.geojson'
-                
-            }
-        );
-
-        map.addLayer({
-            'id': 'villes',
-            'type': 'circle',
-            'source': 'villes',
-            'paint': {
-                'circle-color': 'blue',
-                'circle-opacity': 0.9
-            }
-        });
-});
-
->>>>>>> Stashed changes
 //Interactivité HOVER
 
 var popup = new mapboxgl.Popup({
