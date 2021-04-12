@@ -608,6 +608,15 @@ map.on('load', function () {
 });
 
 
+//Menu de gestion des couches
+switchlayer = function (lname) {
+            if (document.getElementById(lname ).checked) {
+                map.setLayoutProperty(lname, 'visibility', 'visible');
+            } else {
+                map.setLayoutProperty(lname, 'visibility', 'none');
+           }
+        };
+
 //Interactivité HOVER
 
 var popup = new mapboxgl.Popup({

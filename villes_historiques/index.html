@@ -19,6 +19,32 @@
         </div>
         <div id="map" class="map"></div>
 		<button id="fly">Retour à l'échelle régionale</button>
+        
+        <!--Menu gestionnaire des couches -->
+        <div class='menu'>
+        <label class="categoryLabel"><B>A visiter</B></label>
+                  <br>
+        <input type="checkbox" id="immeubles" value="immeubles" onchange="switchlayer('immeubles')" />
+        <label for="immeubles">Monuments historiques</label>
+                  <br>
+        <input type="checkbox" id="Proprietes" value="Proprietes" onchange="switchlayer('Proprietes')"/>
+        <label for="Proprietes">Musées</label>
+                <br>
+                    <hr>
+        <label class="categoryLabel"><B>Services</B></label>
+                  <br>
+        <input type="checkbox" id="Equipements" value="Equipements" onchange="switchlayer('Equipements')"/>
+        <label for="Equipements">Office de tourisme</label>
+            <br>
+        <input type="checkbox" id="Bus" value="Bus" onchange="switchlayer('Bus')" />
+        <label for="Bus">Toilettes</label>
+        <br>
+        <input type="checkbox" id="Bus" value="Bus" onchange="switchlayer('Bus')" />
+        <label for="Bus">Restaurants</label>
+        <br>
+        <input type="checkbox" id="Bus" value="Bus" onchange="switchlayer('Bus')" />
+        <label for="Bus">Hotels</label>
+        </div>
 
         <script src="script.js"></script>
     </body>
