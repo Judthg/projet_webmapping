@@ -590,7 +590,7 @@ map.on('load', function () {
             if (error) throw error;
             map.addImage('custom-marker', image);
 
-<<<<<<< Updated upstream
+
     map.addSource(
         'villes',
         {
@@ -626,7 +626,7 @@ function closeNav() {
 }
 
 
-=======
+
         map.addSource(
             'villes',
             {
@@ -649,7 +649,6 @@ function closeNav() {
         });
 });
 
->>>>>>> Stashed changes
 //Interactivité HOVER
 
 var popup = new mapboxgl.Popup({

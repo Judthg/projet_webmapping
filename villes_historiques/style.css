@@ -40,7 +40,7 @@
     overflow: hidden;
     border-right: 1px solid rgba(0, 0, 0, 0.25);
   }
-
+/*
   .map {
     position: absolute;
     left: 25%;
@@ -48,7 +48,7 @@
     top: 0;
     bottom: 0;
   }
-
+*/
   .heading {
     background: #fff;
     border-bottom: 1px solid #eee;
@@ -142,6 +142,7 @@
 }
 
 /* sidebar qui disparait */
+<<<<<<< HEAD
 =======
 .marker {
 display: block;
@@ -151,3 +152,77 @@ cursor: pointer;
 padding: 0;
 }
 >>>>>>> Stashed changes
+=======
+
+body { margin:0; padding:0; }
+        #map { 
+        position: absolute;  
+        bottom: 0; left: 25%;
+		top: 0;
+        width:75%;
+        height:100%; 
+        }
+   
+html, body, #map{
+    height:100%;
+    margin: 0px;
+}
+#main {
+  position:relative;
+  transition: margin-left .5s;
+  padding: 16px;
+  height:100%;
+
+}
+.sidebar2 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar2 a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar2 a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar2 .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;    
+  position:absolute; 
+  top:10px; 
+  left:10px; 
+  z-index:1;
+  border-radius: 3px;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+>>>>>>> parent of bc84e10 (échec de la sidebar qui disparait TT)

@@ -17,9 +17,19 @@
             </div>
             <div id="listings" class="listings"></div>
         </div>
-        <div id="map" class="map"></div>
+		<!-- sidebar pour les immeubles historiques --> 
+		<div id="mySidebar" class="sidebar2">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+		  <a href="#">About</a>
+		</div>
+		
+		<div id="main">
+		  <button class="openbtn" onclick="openNav()">☰ Sidebar qui disparait</button>  
+		 <div id="map" class="map"></div>
+		</div>
+        
 		<button id="fly">Retour à l'échelle régionale</button>
-
+		
         <script src="script.js"></script>
     </body>
 </html>
