@@ -50,11 +50,18 @@
   }
 
   .heading {
-    background: #fff;
+    background: #2e3842;
     border-bottom: 1px solid #eee;
     height: 60px;
     line-height: 60px;
     padding: 0 10px;
+    opacity: 90%;
+  }
+  
+  .heading h1 {
+      font-size: 25px;
+      font-weight: bold;
+      color: #F3F3F3;
   }
 
   .listings {
@@ -76,6 +83,7 @@
     display: block;
     color: #000000;
     font-weight: 700;
+    
   }
   
   .listings .item .title small { font-weight: 400; }

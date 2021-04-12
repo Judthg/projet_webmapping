@@ -540,8 +540,8 @@ function buildLocationList(data) {
         link.innerHTML = prop.nom;
 
         /* Add details to the individual listing. */
-        var details = listing.appendChild(document.createElement('div'));
-        details.innerHTML = prop.code_insee;
+        //var details = listing.appendChild(document.createElement('div'));
+        //details.innerHTML = prop.code_insee;
 
         // EventListener (réponse au clic)
         link.addEventListener('click', function(e){
