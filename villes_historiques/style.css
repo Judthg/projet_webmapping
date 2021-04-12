@@ -143,7 +143,6 @@
 
 /* sidebar qui disparait */
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 .marker {
 display: block;
@@ -154,8 +153,6 @@ padding: 0;
 }
 >>>>>>> Stashed changes
 =======
-=======
->>>>>>> parent of bc84e10 (échec de la sidebar qui disparait TT)
 
 body { margin:0; padding:0; }
         #map { 
@@ -227,9 +224,5 @@ html, body, #map{
 
 .openbtn:hover {
   background-color: #444;
-<<<<<<< HEAD
-}
->>>>>>> parent of bc84e10 (échec de la sidebar qui disparait TT)
-=======
 }
 >>>>>>> parent of bc84e10 (échec de la sidebar qui disparait TT)
