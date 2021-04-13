@@ -79,7 +79,8 @@ var villes = {
             48.7325199982,
             -3.45540886573
           ],
-          "code_insee": "22113"
+          "code_insee": "22113",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_lannion.png"
         }
       },
       {
@@ -98,7 +99,8 @@ var villes = {
             48.0686098086,
             -2.96278985085
           ],
-          "code_insee": "56178"
+          "code_insee": "56178",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_pontivy.png"
         }
       },
       {
@@ -117,7 +119,8 @@ var villes = {
             47.667777315,
             -2.98261750246
           ],
-          "code_insee": "56007"
+          "code_insee": "56007",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_auray.png"
         }
       },
       {
@@ -136,7 +139,8 @@ var villes = {
             47.651397219,
             -2.08481624467
           ],
-          "code_insee": "35236"
+          "code_insee": "35236",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_redon.png"
         }
       },
       {
@@ -155,7 +159,8 @@ var villes = {
             48.4509330571,
             -4.24931367718
           ],
-          "code_insee": "29103"
+          "code_insee": "29103",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_landerneau.png"
         }
       },
       {
@@ -174,7 +179,8 @@ var villes = {
             47.80411862,
             -3.27884158336
           ],
-          "code_insee": "56083"
+          "code_insee": "56083",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_hennebont.png"
         }
       },
       {
@@ -193,7 +199,8 @@ var villes = {
             47.7065366639,
             -3.35328688749
           ],
-          "code_insee": "56181"
+          "code_insee": "56181",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_portlouis.png"
         }
       },
       {
@@ -212,7 +219,8 @@ var villes = {
             48.6852195271,
             -3.98633703678
           ],
-          "code_insee": "29259"
+          "code_insee": "29259",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_stpoldeleon.png"
         }
       },
       {
@@ -231,7 +239,8 @@ var villes = {
             47.8671615229,
             -4.22309029502
           ],
-          "code_insee": "29220"
+          "code_insee": "29220",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_pontlabbe.png"
         }
       },
       {
@@ -250,7 +259,8 @@ var villes = {
             47.8726906894,
             -3.54974640281
           ],
-          "code_insee": "29233"
+          "code_insee": "29233",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_quimperle.png"
         }
       }
     ]
@@ -542,8 +552,7 @@ function buildLocationList(data) {
         link.innerHTML = prop.nom;
 
         /* Add details to the individual listing. */
-		var logo = '<img src='+prop.logoLocation+'/>';
-		logo.className = 'ecusson';
+		var logo = '<img src="'+prop.logoLocation+'"width = 50/>';
         var details = listing.appendChild(document.createElement('div'));
         details.innerHTML = logo;
 
