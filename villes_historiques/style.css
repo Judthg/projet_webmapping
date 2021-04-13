@@ -95,6 +95,10 @@
     background-color: #f8f8f8;
   }
   
+  .listings.item.ecusson {
+	  height:10px;
+  }
+  
   ::-webkit-scrollbar {
     width: 3px;
     height: 3px;
@@ -153,13 +157,13 @@
 .menu {
      position: absolute;
      top: 10px;
-     left: 20px;
+     /*left: 85%;*/
      width: 200px;
      background-color: #2e3842;
      opacity: 0.7;
      color: #F3F3F3;
      /*padding:1;*/
-     left: 85%;
+     right: 5%;
      font: 12px;
      padding-left: 10px; 
      padding-bottom: 4px;

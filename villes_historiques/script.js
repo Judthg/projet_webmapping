@@ -39,7 +39,8 @@ var villes = {
             48.647180906,
             -2.00884243947
           ],
-          "code_insee": "35288"
+          "code_insee": "35288",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_stmalo.png"
         }
       },
       {
@@ -58,7 +59,8 @@ var villes = {
             48.4686227177,
             -2.51780516292
           ],
-          "code_insee": "22093"
+          "code_insee": "22093",
+		  "logoLocation": "https://github.com/Judthg/projet_webmapping/raw/main/blasons/blason_lamballe.png"
         }
       },
       {
@@ -540,8 +542,9 @@ function buildLocationList(data) {
         link.innerHTML = prop.nom;
 
         /* Add details to the individual listing. */
-        //var details = listing.appendChild(document.createElement('div'));
-        //details.innerHTML = prop.code_insee;
+		var logo = '<img src='+prop.logoLocation+'/>';
+        var details = listing.appendChild(document.createElement('div'));
+        details.innerHTML = logo;
 
         // EventListener (réponse au clic)
         link.addEventListener('click', function(e){
