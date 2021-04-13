@@ -543,6 +543,7 @@ function buildLocationList(data) {
 
         /* Add details to the individual listing. */
 		var logo = '<img src='+prop.logoLocation+'/>';
+		logo.className = 'ecusson';
         var details = listing.appendChild(document.createElement('div'));
         details.innerHTML = logo;
 
