@@ -690,8 +690,7 @@ function closeNav() {
   document.getElementById("mySidebar2").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
-
-//map.on('click', function
+	
 
 // Fonction pour zoomer sur les villes via la sidebar
 function flyToVille(currentFeature) {
@@ -713,6 +712,7 @@ map.on('click', function(e) {
     
     /* Fly to the point */
     flyToVille(clickedPoint);
+	openNav();
 }});
 
 
