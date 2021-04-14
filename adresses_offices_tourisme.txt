@@ -1,0 +1,16 @@
+Adresses des offices de tourisme
+
+saint malo : Espl. Saint-Vincent, 35400 Saint-Malo
+Lamballe : Place du Champ de Foire, 22400 Lamballe
+Lannion : 2 Quai d'Aiguillon, 22300 Lannion
+Pontivy : Péniche Duchesse Anne, 2 Quai Niemen, 56300 Pontivy
+Auray : 20 Rue du Lait, 56400 Auray
+Redon : Place de la République, 35600 Redon
+Landerneau : 16 Place du Général de Gaulle, 29800 Landerneau
+Hennebont : 1 Place Maréchal Foch, 56700 Hennebont
+Port-Louis : 1 Avenue Marcel Charrier, 56290 Port-Louis
+Saint-Pol-de-Léon : 3 Place de l'Évêché, 29250 Saint-Pol-de-Léon
+Pont-l'Abbé : 11 Place Gambetta, 29120 Pont-l'Abbé
+Quimperlé : 3 Place Charles de Gaulle, 29300 Quimperlé
+
+
