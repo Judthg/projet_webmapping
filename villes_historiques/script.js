@@ -680,6 +680,16 @@ map.on('mousemove', function(e) {
 
 })
 
+// Sidebar 2 (apparait au clic)
+function openNav() {
+  document.getElementById("mySidebar2").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar2").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
 
 // Fonction pour zoomer sur les villes via la sidebar
 function flyToVille(currentFeature) {

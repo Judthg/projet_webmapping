@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Villes historiques de Bretagne</title>
+        <title>Villes historiques de Bretagne test sidebar</title>
         <script src="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.js"></script>
         <link href="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.css" rel="stylesheet" />    
         
@@ -10,6 +10,15 @@
 	    <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
+    
+        <!-- sidebar 2 (apparait au clic) --> 
+        <div id="mySidebar2" class="sidebar2">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
 
         <div class="sidebar">
             <div class="heading">
@@ -17,6 +26,7 @@
             </div>
             <div id="listings" class="listings"></div>
         </div>
+        <button class="openbtn" onclick="openNav()">☰ Toggle Sidebar</button>
         <div id="map" class="map"></div>
 		<button id="fly">Retour à l'échelle régionale</button>
         
