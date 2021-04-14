@@ -698,6 +698,7 @@ function flyToVille(currentFeature) {
       center: currentFeature.geometry.coordinates,
       zoom: 12
     });
+	openNav();
 }
 
 // zoom au clic sur la carte
@@ -712,7 +713,6 @@ map.on('click', function(e) {
     
     /* Fly to the point */
     flyToVille(clickedPoint);
-	openNav();
 }});
 
 
@@ -729,11 +729,10 @@ map.addControl(new mapboxgl.ScaleControl({
         
 //Retour au zoom initial
 document.getElementById('fly').addEventListener('click', function () {
-	// Fly to a random location by offsetting the point -74.50, 40
-	// by up to 5 degrees.
 	map.flyTo({
 	center: [-2.8816178480265826, 48.27287617786766],
 	zoom: 7.2,
 	essential: true // this animation is considered essential with respect to prefers-reduced-motion
 	});
+	closeNav();
 });
