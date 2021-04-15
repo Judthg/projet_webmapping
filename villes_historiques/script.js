@@ -50,7 +50,7 @@ $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/musee
 // offices du tourisme
 $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/offices_tourisme.geojson",
     function(data) {
-        offices = data
+        office = data
     }
 );
 
@@ -284,7 +284,7 @@ map.on('mousemove', function(e) {
  
     var feature2 = features2[0];
         popup.setLngLat(feature2.geometry.coordinates)
-          .setHTML('<b>'+ feature2.properties.tico + '</b>' + '<hr>'+ feature2.properties.dpro + '</hr>')
+          .setHTML('<b>'+ feature2.properties.tico + '</b>' + '<hr>'+ feature2.properties.classé_inscrit + '</hr>')
         .addTo(map);
 
 })
