@@ -266,7 +266,7 @@ var villes = {
     ]
   }
   
-var immeubles = {
+var immeubles = 
 {
 "type": "FeatureCollection",
 "name": "immeubles_historiques_10km_villes",
