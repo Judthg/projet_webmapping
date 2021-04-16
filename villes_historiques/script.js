@@ -61,7 +61,19 @@ $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/toile
     }
 );
 
+// Restaurants
+$.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/restaurants.geojson",
+    function(data) {
+        restaurants = data
+    }
+);
 
+// Hotels
+$.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/hotels.geojson",
+    function(data) {
+        hotels = data
+    }
+);
 
 
 
@@ -204,6 +216,7 @@ map.on('load', function () {
         'layout': {'visibility': 'none'},
 		'minzoom': 11
     });
+	
 	
     // Ajout villes historiques de bretagne
 
