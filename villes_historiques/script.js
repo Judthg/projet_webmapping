@@ -146,6 +146,13 @@ map.on('load', function () {
         // Add the loaded image to the style's sprite with the ID 'kitten'.
         map.addImage('musee', image);
     });
+	
+	// chargement image toilettes
+    map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/toilettes.png', function(error, image) {
+        if (error) throw error;
+        // Add the loaded image to the style's sprite with the ID 'kitten'.
+        map.addImage('toilette', image);
+    });
     
     
 	//immeubles historiques
@@ -207,13 +214,9 @@ map.on('load', function () {
 	
 	map.addLayer({
         'id': 'toilette',
-        'type': 'circle',
+        'type': 'symbol',
         'source': 'toilette',
-        'paint': {
-            'circle-color': 'blue',
-            'circle-opacity': 0.9
-        },
-        'layout': {'visibility': 'none'},
+        'layout': {"icon-image": "toilette", "icon-size": 0.02,'visibility': 'none'},
 		'minzoom': 11
     });
 	
