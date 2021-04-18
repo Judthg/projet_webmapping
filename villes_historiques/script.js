@@ -137,6 +137,13 @@ function buildLocationList(data) {
 }
 
 map.on('load', function () {
+	
+	// chargement image villes
+    map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/ville.png', function(error, image) {
+        if (error) throw error;
+        // Add the loaded image to the style's sprite with the ID 'kitten'.
+        map.addImage('villes', image);
+    });
 
     // chargement image immeubles historiques
     map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Logo_monument_historique_-_rouge_sans_texte.svg/558px-Logo_monument_historique_-_rouge_sans_texte.svg.png', function(error, image) {
@@ -244,12 +251,9 @@ map.on('load', function () {
 
     map.addLayer({
         'id': 'villes',
-        'type': 'circle',
+        'type': 'symbol',
         'source': 'villes',
-        'paint': {
-            'circle-color': 'black',
-            'circle-opacity': 0.9
-        },
+        'layout': {"icon-image": "villes", "icon-size": 0.05},
 		'maxzoom': 11
     });
 
