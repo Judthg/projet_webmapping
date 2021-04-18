@@ -82,7 +82,7 @@ villes.features.forEach(function(ville, i){
     ville.properties.id = i;
 });
 
-
+//Sidebar 1 (liste des villes)
 // Fonction qui construit la liste des villes
 function buildLocationList(data) {
     data.features.forEach(function(ville, i){
