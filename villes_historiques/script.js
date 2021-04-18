@@ -153,6 +153,14 @@ map.on('load', function () {
         map.addImage('musee', image);
     });
 	
+	// chargement image offices
+    map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/office.png', function(error, image) {
+        if (error) throw error;
+        // Add the loaded image to the style's sprite with the ID 'kitten'.
+        map.addImage('office', image);
+    });
+    
+	
 	// chargement image toilettes
     map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/toilettes.png', function(error, image) {
         if (error) throw error;
@@ -201,13 +209,9 @@ map.on('load', function () {
 	
 	map.addLayer({
         'id': 'office',
-        'type': 'circle',
+        'type': 'symbol',
         'source': 'office',
-        'paint': {
-            'circle-color': 'green',
-            'circle-opacity': 0.9
-        },
-        'layout': {'visibility': 'visible'},
+        'layout': {"icon-image": "office", "icon-size": 0.02, 'visibility': 'visible'},
 		'minzoom': 11
     });
 	
