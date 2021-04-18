@@ -211,7 +211,7 @@ map.on('load', function () {
         'id': 'office',
         'type': 'symbol',
         'source': 'office',
-        'layout': {"icon-image": "office", "icon-size": 0.02, 'visibility': 'visible'},
+        'layout': {"icon-image": "office", "icon-size": 0.04, 'visibility': 'visible'},
 		'minzoom': 11
     });
 	
