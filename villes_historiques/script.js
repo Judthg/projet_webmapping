@@ -139,7 +139,7 @@ function buildLocationList(data) {
 map.on('load', function () {
 	
 	// chargement image villes
-    map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/ville.png', function(error, image) {
+    map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/tour2.png', function(error, image) {
         if (error) throw error;
         // Add the loaded image to the style's sprite with the ID 'kitten'.
         map.addImage('villes', image);
