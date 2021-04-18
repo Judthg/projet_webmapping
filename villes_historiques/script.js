@@ -311,6 +311,30 @@ map.on('mousemove', function(e) {
 
 })
 
+// Hover musees
+var popupmus = new mapboxgl.Popup({
+    className: "Mypopup",
+    closeButton: false,
+    closeOnClick: false 
+});
+
+map.on('mousemove', function(e) {
+    var features3 = map.queryRenderedFeatures(e.point, { layers: ['musees'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features3.length) ? 'pointer' : '';
+
+    if (!features3.length) {
+        popupmus.remove();
+        return; 
+    }
+ 
+    var feature3 = features3[0];
+        popup.setLngLat(feature3.geometry.coordinates)
+          .setHTML('<b>'+ feature3.properties.name + '</b>')
+        .addTo(map);
+
+})
+
 // Sidebar 2 (apparait au clic)
 function openNav() {
   document.getElementById("mySidebar2").style.width = "25%";
