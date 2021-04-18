@@ -284,8 +284,9 @@ map.on('mousemove', function(e) {
     }
 	
     var feature = features[0];
+	var logo = '<img src="'+feature.properties.logoLocation+'"width = 50/>';
         popup.setLngLat(feature.geometry.coordinates)
-          .setHTML('<b>'+ feature.properties.nom + '</b>' + '<hr>'+ feature2.properties.classé_inscrit + '</hr>')
+          .setHTML('<b>'+ feature.properties.nom + '</b>' + '<hr>'+ logo + '</hr>')
         .addTo(map);
 })
 
