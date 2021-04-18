@@ -3,17 +3,17 @@
 "name": "offices_tourisme",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "Ville": "Saint-Malo", "Lat": 48.651770584351304, "Long": -2.0215124692410091 }, "geometry": { "type": "Point", "coordinates": [ -2.021512469241009, 48.651770584351304 ] } },
-{ "type": "Feature", "properties": { "Ville": "Lamballe", "Lat": 48.471141249312424, "Long": -2.5180942499461003 }, "geometry": { "type": "Point", "coordinates": [ -2.5180942499461, 48.471141249312424 ] } },
-{ "type": "Feature", "properties": { "Ville": "Lannion", "Lat": 48.733301176198296, "Long": -3.4625736208225346 }, "geometry": { "type": "Point", "coordinates": [ -3.462573620822535, 48.733301176198296 ] } },
-{ "type": "Feature", "properties": { "Ville": "Pontivy", "Lat": 48.067802399608524, "Long": -2.9681996397277914 }, "geometry": { "type": "Point", "coordinates": [ -2.968199639727791, 48.067802399608524 ] } },
-{ "type": "Feature", "properties": { "Ville": "Auray", "Lat": 47.66822495369361, "Long": -2.9850494997135915 }, "geometry": { "type": "Point", "coordinates": [ -2.985049499713591, 47.66822495369361 ] } },
-{ "type": "Feature", "properties": { "Ville": "Redon", "Lat": 47.653604031009507, "Long": -2.0841696117501067 }, "geometry": { "type": "Point", "coordinates": [ -2.084169611750107, 47.653604031009507 ] } },
-{ "type": "Feature", "properties": { "Ville": "Landerneau", "Lat": 48.453907226968745, "Long": -4.2501168104138145 }, "geometry": { "type": "Point", "coordinates": [ -4.250116810413815, 48.453907226968745 ] } },
-{ "type": "Feature", "properties": { "Ville": "Hennebont", "Lat": 47.806830792520344, "Long": -3.2767720791607582 }, "geometry": { "type": "Point", "coordinates": [ -3.276772079160758, 47.806830792520344 ] } },
-{ "type": "Feature", "properties": { "Ville": "Port-Louis", "Lat": 47.708907436808978, "Long": -3.3509224752774638 }, "geometry": { "type": "Point", "coordinates": [ -3.350922475277464, 47.708907436808978 ] } },
-{ "type": "Feature", "properties": { "Ville": "Saint-Pol-de-L�on", "Lat": 48.686082106404726, "Long": -3.9867428986156814 }, "geometry": { "type": "Point", "coordinates": [ -3.986742898615681, 48.686082106404726 ] } },
-{ "type": "Feature", "properties": { "Ville": "Pont-l'Abb�", "Lat": 47.865720298535457, "Long": -4.2216554105089044 }, "geometry": { "type": "Point", "coordinates": [ -4.221655410508904, 47.865720298535457 ] } },
-{ "type": "Feature", "properties": { "Ville": "Quimperl�", "Lat": 47.872642628862515, "Long": -3.544457802370192 }, "geometry": { "type": "Point", "coordinates": [ -3.544457802370192, 47.872642628862515 ] } }
+{ "type": "Feature", "properties": { "Ville": "Saint-Malo","adresse": "Espl. Saint-Vincent, 35400 Saint-Malo","Lat": 48.651770584351304, "Long": -2.0215124692410091 }, "geometry": { "type": "Point", "coordinates": [ -2.021512469241009, 48.651770584351304 ] } },
+{ "type": "Feature", "properties": { "Ville": "Lamballe","adresse": "Place du Champ de Foire, 22400 Lamballe", "Lat": 48.471141249312424, "Long": -2.5180942499461003 }, "geometry": { "type": "Point", "coordinates": [ -2.5180942499461, 48.471141249312424 ] } },
+{ "type": "Feature", "properties": { "Ville": "Lannion","adresse": "2 Quai d'Aiguillon, 22300 Lannion", "Lat": 48.733301176198296, "Long": -3.4625736208225346 }, "geometry": { "type": "Point", "coordinates": [ -3.462573620822535, 48.733301176198296 ] } },
+{ "type": "Feature", "properties": { "Ville": "Pontivy","adresse": "Péniche Duchesse Anne, 2 Quai Niemen, 56300 Pontivy", "Lat": 48.067802399608524, "Long": -2.9681996397277914 }, "geometry": { "type": "Point", "coordinates": [ -2.968199639727791, 48.067802399608524 ] } },
+{ "type": "Feature", "properties": { "Ville": "Auray","adresse": "20 Rue du Lait, 56400 Auray", "Lat": 47.66822495369361, "Long": -2.9850494997135915 }, "geometry": { "type": "Point", "coordinates": [ -2.985049499713591, 47.66822495369361 ] } },
+{ "type": "Feature", "properties": { "Ville": "Redon","adresse": "Place de la République, 35600 Redon", "Lat": 47.653604031009507, "Long": -2.0841696117501067 }, "geometry": { "type": "Point", "coordinates": [ -2.084169611750107, 47.653604031009507 ] } },
+{ "type": "Feature", "properties": { "Ville": "Landerneau","adresse": "16 Place du Général de Gaulle, 29800 Landerneau", "Lat": 48.453907226968745, "Long": -4.2501168104138145 }, "geometry": { "type": "Point", "coordinates": [ -4.250116810413815, 48.453907226968745 ] } },
+{ "type": "Feature", "properties": { "Ville": "Hennebont","adresse": "1 Place Maréchal Foch, 56700 Hennebont", "Lat": 47.806830792520344, "Long": -3.2767720791607582 }, "geometry": { "type": "Point", "coordinates": [ -3.276772079160758, 47.806830792520344 ] } },
+{ "type": "Feature", "properties": { "Ville": "Port-Louis","adresse": "1 Avenue Marcel Charrier, 56290 Port-Louis", "Lat": 47.708907436808978, "Long": -3.3509224752774638 }, "geometry": { "type": "Point", "coordinates": [ -3.350922475277464, 47.708907436808978 ] } },
+{ "type": "Feature", "properties": { "Ville": "Saint-Pol-de-L�on","adresse": "3 Place de l'Évêché, 29250 Saint-Pol-de-Léon", "Lat": 48.686082106404726, "Long": -3.9867428986156814 }, "geometry": { "type": "Point", "coordinates": [ -3.986742898615681, 48.686082106404726 ] } },
+{ "type": "Feature", "properties": { "Ville": "Pont-l'Abb�","adresse": "11 Place Gambetta, 29120 Pont-l'Abbé", "Lat": 47.865720298535457, "Long": -4.2216554105089044 }, "geometry": { "type": "Point", "coordinates": [ -4.221655410508904, 47.865720298535457 ] } },
+{ "type": "Feature", "properties": { "Ville": "Quimperl�","adresse": "3 Place Charles de Gaulle, 29300 Quimperlé","Lat": 47.872642628862515, "Long": -3.544457802370192 }, "geometry": { "type": "Point", "coordinates": [ -3.544457802370192, 47.872642628862515 ] } }
 ]
 }

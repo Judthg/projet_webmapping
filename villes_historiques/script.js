@@ -339,6 +339,30 @@ map.on('mousemove', function(e) {
 
 })
 
+// Hover offices tourisme
+var popupof = new mapboxgl.Popup({
+    className: "Mypopup",
+    closeButton: false,
+    closeOnClick: false 
+});
+
+map.on('mousemove', function(e) {
+    var features4 = map.queryRenderedFeatures(e.point, { layers: ['office'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features4.length) ? 'pointer' : '';
+
+    if (!features4.length) {
+        popupof.remove();
+        return; 
+    }
+ 
+    var feature4 = features4[0];
+        popup.setLngLat(feature4.geometry.coordinates)
+          .setHTML('<b>'+ feature4.properties.Ville + '</b>')
+        .addTo(map);
+
+})
+
 // Sidebar 2 (apparait au clic)
 function openNav() {
   document.getElementById("mySidebar2").style.width = "25%";
