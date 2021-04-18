@@ -108,9 +108,15 @@ function buildLocationList(data) {
         link.innerHTML = prop.nom;
 
         /* Add details to the individual listing. */
+		var info = listing.appendChild(document.createElement('div'));
+		info.className = 'info';
+		var blason = info.appendChild(document.createElement('div'));
 		var logo = '<img src="'+prop.logoLocation+'"width = 50/>';
-        var details = listing.appendChild(document.createElement('div'));
-        details.innerHTML = logo;
+		blason.innerHTML = logo;
+		blason.className = 'blason';
+        var details = info.appendChild(document.createElement('div'));
+        details.innerHTML = "adresse de l'office de tourisme : "+prop.office;
+		details.className = 'contenu';
 
         // EventListener (réponse au clic)
         link.addEventListener('click', function(e){

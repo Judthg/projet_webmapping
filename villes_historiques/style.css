@@ -95,6 +95,11 @@
     background-color: #f8f8f8;
   }
   
+
+  .listings .item .info .blason {float:right;
+  }
+  
+  
   ::-webkit-scrollbar {
     width: 3px;
     height: 3px;
