@@ -267,7 +267,7 @@ switchlayer = function (lname) {
         };
 
 //Interactivité HOVER
-
+// Hover villes
 var popup = new mapboxgl.Popup({
     className: "Mypopup",
     closeButton: false,
@@ -278,17 +278,15 @@ map.on('mousemove', function(e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['villes'] });
     // Change the cursor style as a UI indicator.
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
-
     if (!features.length) {
         popup.remove();
         return; 
     }
- 
+	
     var feature = features[0];
         popup.setLngLat(feature.geometry.coordinates)
-          .setHTML('<b>'+ feature.properties.nom + '</b>' )
+          .setHTML('<b>'+ feature.properties.nom + '</b>' + '<hr>'+ feature2.properties.classé_inscrit + '</hr>')
         .addTo(map);
-
 })
 
 // Hover immeubles historiques
