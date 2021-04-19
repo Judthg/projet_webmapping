@@ -94,6 +94,11 @@ villes.features.forEach(function(ville, i){
     ville.properties.id = i;
 });
 
+/* Assign a unique ID to each monument */
+immeubles.features.forEach(function(immeuble, i){
+    immeuble.properties.id = i;
+});
+
 //Sidebar 1 (liste des villes)
 // Fonction qui construit la liste des villes
 function buildLocationList(data) {
@@ -146,6 +151,44 @@ function buildLocationList(data) {
         this.parentNode.classList.add('active');
         });
     });
+}
+
+//Sidebar2
+function construireLocationList(data) {
+  data.features.forEach(function(immeuble, i){
+    /**
+     * Create a shortcut for `store.properties`,
+     * which will be used several times below.
+    **/
+    var propri = immeuble.properties;
+
+    /* Add a new listing section to the sidebar. */
+    var listingsim = document.getElementById('listingsim');
+    var listingim = listingsim.appendChild(document.createElement('div'));
+    /* Assign a unique `id` to the listing. */
+    listingim.id = "listingim-" + data.features[i].properties.id;
+    /* Assign the `item` class to each listing for styling. */
+    listingim.className = 'item';
+
+    /* Add the link to the individual listing created above. */
+    var link = listingim.appendChild(document.createElement('a'));
+    link.href = '#';
+    link.className = 'title';
+    link.id = "link-" + propri.id;
+    link.innerHTML = propri.classé_inscrit;
+
+    /* Add details to the individual listing. */
+    /*var details = listing.appendChild(document.createElement('div'));
+    details.innerHTML = prop.city;
+    if (prop.phone) {
+      details.innerHTML += ' · ' + prop.phoneFormatted;
+    }
+    if (prop.distance) {
+      var roundedDistance = Math.round(prop.distance * 100) / 100;
+      details.innerHTML +=
+        '<p><strong>' + roundedDistance + ' miles away</strong></p>';
+    }*/
+  });
 }
 
 map.on('load', function () {
@@ -224,7 +267,7 @@ map.on('load', function () {
         'layout': { "icon-image": "immeuble_hist", "icon-size": 0.09, 'visibility': 'visible'},
 		'minzoom': 11
     });
-
+	construireLocationList(immeubles);
 	
 	// musees
 	map.addSource('musees', {
