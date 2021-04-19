@@ -175,7 +175,7 @@ function construireLocationList(data) {
     link.href = '#';
     link.className = 'title';
     link.id = "link-" + propri.id;
-    link.innerHTML = propri.classé_inscrit;
+    link.innerHTML = propri.tico;
 
     /* Add details to the individual listing. */
     /*var details = listing.appendChild(document.createElement('div'));
