@@ -7,7 +7,18 @@ if (!('remove' in Element.prototype)) {
     };
 }
 
-// Fonction pour réinitialiser les variables à chaque rechargement (F5)
+// Fonction pour réinitialiser la checkbox à chaque rechargement (F5)
+function init(){
+    document.getElementById("immeubles").checked = true;
+    document.getElementById("musees").checked = true;
+    document.getElementById("office").checked = true;
+    document.getElementById("toilette").checked = false;
+    document.getElementById("restaurants").checked = false;
+    document.getElementById("hotels").checked = false;
+}
+
+init()
+
 
 // Ajout du fond de carte
 
@@ -69,7 +80,6 @@ $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/resta
         restaurants = data
     }
 );
-console.log(restaurants)
 
 // Hotels
 $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/hotels.geojson",
@@ -77,8 +87,6 @@ $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/hotel
         hotels = data
     }
 );
-console.log(hotels)
-
 
 
 /* Assign a unique ID to each store */
@@ -119,7 +127,7 @@ function buildLocationList(data) {
 		blason.innerHTML = logo;
 		blason.className = 'blason';
         var details = info.appendChild(document.createElement('div'));
-        details.innerHTML = "adresse de l'office de tourisme : "+prop.office;
+        details.innerHTML = "Office de tourisme : "+prop.office;
 		details.className = 'contenu';
 
         // EventListener (réponse au clic)
