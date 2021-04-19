@@ -185,7 +185,7 @@ map.on('load', function () {
     
 	
 	// chargement image toilettes
-    map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/toilettes.png', function(error, image) {
+    map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/toilettes3.png', function(error, image) {
         if (error) throw error;
         // Add the loaded image to the style's sprite with the ID 'kitten'.
         map.addImage('toilette', image);
@@ -197,6 +197,13 @@ map.on('load', function () {
         if (error) throw error;
         // Add the loaded image to the style's sprite with the ID 'kitten'.
         map.addImage('restaurants', image);
+    });
+
+    // chargement image restaurants
+    map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/hotels.png', function(error, image) {
+        if (error) throw error;
+        // Add the loaded image to the style's sprite with the ID 'kitten'.
+        map.addImage('hotels', image);
     });
     
 
@@ -214,7 +221,7 @@ map.on('load', function () {
         'id': 'immeubles',
         'type': 'symbol',
         'source': 'immeubles',
-        'layout': { "icon-image": "immeuble_hist", "icon-size": 0.09},
+        'layout': { "icon-image": "immeuble_hist", "icon-size": 0.09, 'visibility': 'visible'},
 		'minzoom': 11
     });
 
@@ -230,7 +237,7 @@ map.on('load', function () {
         'id': 'musees',
         'type': 'symbol',
         'source': 'musees',
-        'layout': { "icon-image": "musee", "icon-size": 0.2},
+        'layout': { "icon-image": "musee", "icon-size": 0.2, 'visibility': 'visible'},
 		'minzoom': 11
     });
     
@@ -262,7 +269,7 @@ map.on('load', function () {
         'id': 'toilette',
         'type': 'symbol',
         'source': 'toilette',
-        'layout': {"icon-image": "toilette", "icon-size": 0.01,'visibility': 'none'},
+        'layout': {"icon-image": "toilette", "icon-size": 0.06,'visibility': 'none'},
 		'minzoom': 11
     });
 
@@ -279,6 +286,22 @@ map.on('load', function () {
         'type': 'symbol',
         'source': 'restaurants',
         'layout': {"icon-image": "restaurants", "icon-size": 0.03,'visibility': 'none'},
+        'minzoom': 11
+    });
+
+
+    //hotels
+	map.addSource('hotels', {
+        type: 'geojson',
+        data: hotels
+        }
+    );
+
+    map.addLayer({
+        'id': 'hotels',
+        'type': 'symbol',
+        'source': 'hotels',
+        'layout': {"icon-image": "hotels", "icon-size": 0.05,'visibility': 'none'},
         'minzoom': 11
     });
 	
@@ -298,7 +321,7 @@ map.on('load', function () {
         'id': 'villes',
         'type': 'symbol',
         'source': 'villes',
-        'layout': {"icon-image": "villes", "icon-size": 0.05},
+        'layout': {"icon-image": "villes", "icon-size": 0.05, 'visibility': 'visible'},
 		'maxzoom': 11
     });
 
