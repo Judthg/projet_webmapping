@@ -7,6 +7,8 @@ if (!('remove' in Element.prototype)) {
     };
 }
 
+// Fonction pour réinitialiser les variables à chaque rechargement (F5)
+
 // Ajout du fond de carte
 
 var map = new mapboxgl.Map({
@@ -67,6 +69,7 @@ $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/resta
         restaurants = data
     }
 );
+console.log(restaurants)
 
 // Hotels
 $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/hotels.geojson",
@@ -74,6 +77,7 @@ $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/hotel
         hotels = data
     }
 );
+console.log(hotels)
 
 
 
@@ -137,13 +141,16 @@ function buildLocationList(data) {
 }
 
 map.on('load', function () {
-	
+
+    // Ajout des images des couches
+    
 	// chargement image villes
     map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/tour2.png', function(error, image) {
         if (error) throw error;
         // Add the loaded image to the style's sprite with the ID 'kitten'.
         map.addImage('villes', image);
     });
+
 
     // chargement image immeubles historiques
     map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Logo_monument_historique_-_rouge_sans_texte.svg/558px-Logo_monument_historique_-_rouge_sans_texte.svg.png', function(error, image) {
@@ -153,13 +160,14 @@ map.on('load', function () {
     });
 
 
-    // chargement image musées --> LE CHARGEMENT NE FONCTIONNE PAS :(
+    // chargement image musées
     map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/musees.png', function(error, image) {
         if (error) throw error;
         // Add the loaded image to the style's sprite with the ID 'kitten'.
         map.addImage('musee', image);
     });
-	
+    
+    
 	// chargement image offices
     map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/office.png', function(error, image) {
         if (error) throw error;
@@ -174,8 +182,19 @@ map.on('load', function () {
         // Add the loaded image to the style's sprite with the ID 'kitten'.
         map.addImage('toilette', image);
     });
+
+
+    // chargement image restaurants
+    map.loadImage('https://raw.githubusercontent.com/Judthg/projet_webmapping/main/pictos_carte/restaurants.png', function(error, image) {
+        if (error) throw error;
+        // Add the loaded image to the style's sprite with the ID 'kitten'.
+        map.addImage('restaurants', image);
+    });
     
-    
+
+
+    // Ajout des couches
+
 	//immeubles historiques
 	map.addSource('immeubles', {
             type: 'geojson',
@@ -206,7 +225,8 @@ map.on('load', function () {
         'layout': { "icon-image": "musee", "icon-size": 0.2},
 		'minzoom': 11
     });
-	
+    
+    
 	//offices de tourisme
 	map.addSource('office', {
             type: 'geojson',
@@ -221,7 +241,8 @@ map.on('load', function () {
         'layout': {"icon-image": "office", "icon-size": 0.04, 'visibility': 'visible'},
 		'minzoom': 11
     });
-	
+    
+    
 	//toilettes
 	map.addSource('toilette', {
             type: 'geojson',
@@ -233,12 +254,28 @@ map.on('load', function () {
         'id': 'toilette',
         'type': 'symbol',
         'source': 'toilette',
-        'layout': {"icon-image": "toilette", "icon-size": 0.02,'visibility': 'none'},
+        'layout': {"icon-image": "toilette", "icon-size": 0.01,'visibility': 'none'},
 		'minzoom': 11
+    });
+
+
+    //restaurants
+	map.addSource('restaurants', {
+        type: 'geojson',
+        data: restaurants
+        }
+    );
+
+    map.addLayer({
+        'id': 'restaurants',
+        'type': 'symbol',
+        'source': 'restaurants',
+        'layout': {"icon-image": "restaurants", "icon-size": 0.03,'visibility': 'none'},
+        'minzoom': 11
     });
 	
 	
-    // Ajout villes historiques de bretagne
+    //villes historiques de bretagne
 
     map.addSource(
         'villes',
