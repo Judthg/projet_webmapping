@@ -47,7 +47,7 @@ $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/ville
 );
 
 // immeubles historiques
-$.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/immeubles_historiques_10km_villes.geojson",
+$.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/monuments_historiques.geojson",
     function(data) {
         immeubles = data
     }
