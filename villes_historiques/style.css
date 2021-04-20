@@ -63,13 +63,13 @@
       color: #F3F3F3;
   }
   
-  @media screen and (max-width:60em){
+  @media screen and (max-width:70em){
       .heading h1{
           font-size: 22px;
       }
   }
   
-  @media screen and (max-width:60em){
+  @media screen and (max-width:70em){
       .heading {
           height: 80px;
       }
@@ -195,7 +195,6 @@
 }
 
 
-
 /* personnalisation de la popup hover */
 .Mypopup .mapboxgl-popup-content {
     background-color: black;
@@ -223,7 +222,12 @@
 	background: #2e3842;
     right: 30%;
 }
-
+ @media screen and (max-width:70em){
+      #fly {
+          font-size: 11px;
+          height: 40px;
+      }
+  }
 /* menu gestionnaire des couches */
 .menu {
      position: absolute;
