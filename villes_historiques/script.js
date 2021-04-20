@@ -178,9 +178,9 @@ function construireLocationList(data) {
     link.innerHTML = propri.tico;
 
     /* Add details to the individual listing. */
-    var detailsim = listingim.appendChild(document.createElement('div'));
-    detailsim.innerHTML = prop.nom
-    /*if (prop.phone) {
+    /*var details = listing.appendChild(document.createElement('div'));
+    details.innerHTML = prop.city;
+    if (prop.phone) {
       details.innerHTML += ' · ' + prop.phoneFormatted;
     }
     if (prop.distance) {
@@ -188,6 +188,21 @@ function construireLocationList(data) {
       details.innerHTML +=
         '<p><strong>' + roundedDistance + ' miles away</strong></p>';
     }*/
+    // EventListener (réponse au clic)
+        link.addEventListener('click', function(e){
+        for (var i = 0; i < data.features.length; i++) {
+            if (this.id === "link-" + data.features[i].properties.id) {
+                var clickedListingim = data.features[i];
+                flyToMonument(clickedListingim);
+                //createPopUp(clickedListing);
+            }
+        }  
+        var activeItem = document.getElementsByClassName('active');
+        if (activeItem[0]) {
+            activeItem[0].classList.remove('active');
+        }
+        this.parentNode.classList.add('active');
+        });
   });
 }
 
@@ -496,6 +511,14 @@ function flyToVille(currentFeature) {
       zoom: 12
     });
 	openNav();
+}
+
+// Fonction pour zoomer sur les monuments via la sidebar
+function flyToMonument(currentFeature) {
+    map.flyTo({
+      center: currentFeature.geometry.coordinates,
+      zoom: 15
+    });
 }
 
 // zoom au clic sur la carte

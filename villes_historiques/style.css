@@ -62,6 +62,18 @@
       font-weight: bold;
       color: #F3F3F3;
   }
+  
+  @media screen and (max-width:60em){
+      .heading h1{
+          font-size: 22px;
+      }
+  }
+  
+  @media screen and (max-width:60em){
+      .heading {
+          height: 80px;
+      }
+  }
 
   .listings {
     height: 100%;
@@ -97,6 +109,8 @@
   
 
   .listings .item .info .blason {float:right;
+    margin-top:-20px;
+    margin-left:5px;
   }
   
   
