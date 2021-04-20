@@ -486,8 +486,32 @@ map.on('mousemove', function(e) {
     }
  
     var feature4 = features4[0];
-        popup.setLngLat(feature4.geometry.coordinates)
+        popupof.setLngLat(feature4.geometry.coordinates)
           .setHTML('<b>'+ 'Adresse : ' + feature4.properties.Adresse + '</b>')
+        .addTo(map);
+
+})
+
+// Hover restos
+var popuprest = new mapboxgl.Popup({
+    className: "Mypopup",
+    closeButton: false,
+    closeOnClick: false 
+});
+
+map.on('mousemove', function(e) {
+    var features5 = map.queryRenderedFeatures(e.point, { layers: ['restaurants'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features5.length) ? 'pointer' : '';
+
+    if (!features5.length) {
+        popuprest.remove();
+        return; 
+    }
+ 
+    var feature5 = features5[0];
+        popuprest.setLngLat(feature5.geometry.coordinates)
+          .setHTML('<b>'+ feature5.properties.name + '</b>')
         .addTo(map);
 
 })
