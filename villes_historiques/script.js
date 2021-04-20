@@ -47,7 +47,7 @@ $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/ville
 );
 
 // immeubles historiques
-$.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/immeubles_historiques_10km_villes.geojson",
+$.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/monuments_historiques.geojson",
     function(data) {
         immeubles = data
     }
@@ -188,6 +188,21 @@ function construireLocationList(data) {
       details.innerHTML +=
         '<p><strong>' + roundedDistance + ' miles away</strong></p>';
     }*/
+    // EventListener (réponse au clic)
+        link.addEventListener('click', function(e){
+        for (var i = 0; i < data.features.length; i++) {
+            if (this.id === "link-" + data.features[i].properties.id) {
+                var clickedListingim = data.features[i];
+                flyToMonument(clickedListingim);
+                //createPopUp(clickedListing);
+            }
+        }  
+        var activeItem = document.getElementsByClassName('active');
+        if (activeItem[0]) {
+            activeItem[0].classList.remove('active');
+        }
+        this.parentNode.classList.add('active');
+        });
   });
 }
 
@@ -471,8 +486,32 @@ map.on('mousemove', function(e) {
     }
  
     var feature4 = features4[0];
-        popup.setLngLat(feature4.geometry.coordinates)
+        popupof.setLngLat(feature4.geometry.coordinates)
           .setHTML('<b>'+ 'Adresse : ' + feature4.properties.Adresse + '</b>')
+        .addTo(map);
+
+})
+
+// Hover restos
+var popuprest = new mapboxgl.Popup({
+    className: "Mypopup",
+    closeButton: false,
+    closeOnClick: false 
+});
+
+map.on('mousemove', function(e) {
+    var features5 = map.queryRenderedFeatures(e.point, { layers: ['restaurants'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features5.length) ? 'pointer' : '';
+
+    if (!features5.length) {
+        popuprest.remove();
+        return; 
+    }
+ 
+    var feature5 = features5[0];
+        popuprest.setLngLat(feature5.geometry.coordinates)
+          .setHTML('<b>'+ feature5.properties.name + '</b>')
         .addTo(map);
 
 })
@@ -496,6 +535,14 @@ function flyToVille(currentFeature) {
       zoom: 12
     });
 	openNav();
+}
+
+// Fonction pour zoomer sur les monuments via la sidebar
+function flyToMonument(currentFeature) {
+    map.flyTo({
+      center: currentFeature.geometry.coordinates,
+      zoom: 15
+    });
 }
 
 // zoom au clic sur la carte
