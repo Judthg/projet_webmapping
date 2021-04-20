@@ -75,7 +75,7 @@ $.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/toile
 );
 
 // Restaurants
-$.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/restaurants.geojson",
+$.getJSON("https://raw.githubusercontent.com/Judthg/projet_webmapping/main/restos.geojson",
     function(data) {
         restaurants = data
     }
