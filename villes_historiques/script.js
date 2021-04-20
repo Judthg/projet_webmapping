@@ -516,6 +516,54 @@ map.on('mousemove', function(e) {
 
 })
 
+// Hover hotels
+var popuphot = new mapboxgl.Popup({
+    className: "Mypopup",
+    closeButton: false,
+    closeOnClick: false 
+});
+
+map.on('mousemove', function(e) {
+    var features6 = map.queryRenderedFeatures(e.point, { layers: ['hotels'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features6.length) ? 'pointer' : '';
+
+    if (!features6.length) {
+        popuphot.remove();
+        return; 
+    }
+ 
+    var feature6 = features6[0];
+        popuphot.setLngLat(feature6.geometry.coordinates)
+          .setHTML('<b>'+ feature6.properties.name + '</b>' + '<hr>'+ feature6.properties.NOM_COMM + '</hr>')
+        .addTo(map);
+
+})
+
+// Hover toilettes
+var popuptoil = new mapboxgl.Popup({
+    className: "Mypopup",
+    closeButton: false,
+    closeOnClick: false 
+});
+
+map.on('mousemove', function(e) {
+    var features7 = map.queryRenderedFeatures(e.point, { layers: ['toilette'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features7.length) ? 'pointer' : '';
+
+    if (!features7.length) {
+        popuptoil.remove();
+        return; 
+    }
+ 
+    var feature7 = features7[0];
+        popuptoil.setLngLat(feature7.geometry.coordinates)
+          .setHTML('<b>'+ feature7.properties.NOM_COMM + '</b>')
+        .addTo(map);
+
+})
+
 // Sidebar 2 (apparait au clic)
 function openNav() {
   document.getElementById("mySidebar2").style.width = "25%";
