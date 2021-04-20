@@ -178,9 +178,9 @@ function construireLocationList(data) {
     link.innerHTML = propri.tico;
 
     /* Add details to the individual listing. */
-    /*var details = listing.appendChild(document.createElement('div'));
-    details.innerHTML = prop.city;
-    if (prop.phone) {
+    var detailsim = listingim.appendChild(document.createElement('div'));
+    detailsim.innerHTML = prop.nom
+    /*if (prop.phone) {
       details.innerHTML += ' · ' + prop.phoneFormatted;
     }
     if (prop.distance) {
