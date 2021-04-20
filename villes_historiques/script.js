@@ -511,7 +511,7 @@ map.on('mousemove', function(e) {
  
     var feature5 = features5[0];
         popuprest.setLngLat(feature5.geometry.coordinates)
-          .setHTML('<b>'+ feature5.properties.name + '</b>')
+          .setHTML('<b>'+ feature5.properties.name + '</b>' + '<hr>'+ feature5.properties.NOM_COMM + '</hr>')
         .addTo(map);
 
 })
