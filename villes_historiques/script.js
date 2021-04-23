@@ -470,7 +470,7 @@ map.on('mousemove', function(e) {
 
 // Hover offices tourisme
 var popupof = new mapboxgl.Popup({
-    className: "Mypopup",
+    className: "Mypopup2",
     closeButton: false,
     closeOnClick: false 
 });
@@ -494,7 +494,7 @@ map.on('mousemove', function(e) {
 
 // Hover restos
 var popuprest = new mapboxgl.Popup({
-    className: "Mypopup",
+    className: "Mypopup2",
     closeButton: false,
     closeOnClick: false 
 });
@@ -518,7 +518,7 @@ map.on('mousemove', function(e) {
 
 // Hover hotels
 var popuphot = new mapboxgl.Popup({
-    className: "Mypopup",
+    className: "Mypopup2",
     closeButton: false,
     closeOnClick: false 
 });
@@ -542,7 +542,7 @@ map.on('mousemove', function(e) {
 
 // Hover toilettes
 var popuptoil = new mapboxgl.Popup({
-    className: "Mypopup",
+    className: "Mypopup2",
     closeButton: false,
     closeOnClick: false 
 });

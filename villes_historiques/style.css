@@ -206,6 +206,17 @@
     opacity: 0.7;
 }
 
+/* personnalisation de la popup hover v2 */
+.Mypopup2 .mapboxgl-popup-content {
+    background-color: pink;
+    color : black;
+    opacity : 0.8;
+}
+.Mypopup2 .mapboxgl-popup-tip {
+    border-top-color: pink;
+    opacity: 0.8;
+}
+
 /* bouton retour au zoom initial */
 #fly {
 	display: block;
