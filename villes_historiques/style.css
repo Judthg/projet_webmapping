@@ -31,7 +31,7 @@
 
   /* Sidebar */
   .sidebar {
-    position: absolute;
+    position: fixed;
     width: 25%;
     height: 100%;
     top: 0;
@@ -255,5 +255,5 @@
      padding-bottom: 4px;
      padding-top: 4px;
         }
-        
-   
+/* menu gestionnaire du fond de carte */       
+ 
