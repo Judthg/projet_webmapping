@@ -155,18 +155,20 @@ function buildLocationList(data) {
 
 //Sidebar2
 function construireLocationList(data) {
-  data.features.forEach(function(immeuble, i){
+    var listingsim = document.getElementById('listingsim');
+    listingsim.innerHTML = '';
+    data.forEach(function(element, i){
     /**
      * Create a shortcut for `store.properties`,
      * which will be used several times below.
     **/
-    var propri = immeuble.properties;
+    var propri = element.properties;
 
     /* Add a new listing section to the sidebar. */
-    var listingsim = document.getElementById('listingsim');
+    
     var listingim = listingsim.appendChild(document.createElement('div'));
     /* Assign a unique `id` to the listing. */
-    listingim.id = "listingim-" + data.features[i].properties.id;
+    listingim.id = "listingim-" + propri.id;
     /* Assign the `item` class to each listing for styling. */
     listingim.className = 'item';
 
@@ -175,7 +177,7 @@ function construireLocationList(data) {
     link.href = '#';
     link.className = 'title';
     link.id = "link-" + propri.id;
-    link.innerHTML = propri.tico;
+    link.innerHTML = propri.name;
 
     /* Add details to the individual listing. */
     /*var details = listing.appendChild(document.createElement('div'));
@@ -188,11 +190,12 @@ function construireLocationList(data) {
       details.innerHTML +=
         '<p><strong>' + roundedDistance + ' miles away</strong></p>';
     }*/
+
     // EventListener (réponse au clic)
-        link.addEventListener('click', function(e){
-        for (var i = 0; i < data.features.length; i++) {
-            if (this.id === "link-" + data.features[i].properties.id) {
-                var clickedListingim = data.features[i];
+    link.addEventListener('click', function(e){
+        for (var i = 0; i < data.length; i++) {
+            if (this.id === "link-" + data[i].properties.id) {
+                var clickedListingim = data[i];
                 flyToMonument(clickedListingim);
                 //createPopUp(clickedListing);
             }
@@ -282,7 +285,7 @@ map.on('load', function () {
         'layout': { "icon-image": "immeuble_hist", "icon-size": 0.09, 'visibility': 'visible'},
 		'minzoom': 11
     });
-	construireLocationList(immeubles);
+	//construireLocationList(immeubles);
 	
 	// musees
 	map.addSource('musees', {
@@ -566,13 +569,19 @@ map.on('mousemove', function(e) {
 
 // Sidebar 2 (apparait au clic)
 function openNav() {
-  document.getElementById("mySidebar2").style.width = "25%";
-  document.getElementById("main").style.marginLeft = "250px";
+
+    setTimeout(function() {
+        document.getElementById("mySidebar2").style.width = "25%";
+        //document.getElementById("main").style.marginLeft = "250px";
+        var zoomedMusees = map.queryRenderedFeatures(null, { layers: ['musees'] });
+        console.log(zoomedMusees);
+        construireLocationList(zoomedMusees);
+    }, 2000); //Vitesse du zoom
 }
 
 function closeNav() {
   document.getElementById("mySidebar2").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
+  //document.getElementById("main").style.marginLeft= "0";
 }
 	
 
