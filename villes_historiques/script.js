@@ -585,7 +585,7 @@ function openNav() {
 
         construireLocationList(zoomedMonuments); // on applique la fonction qui fait appel à la liste des monuments
 
-    }, 2000); //Vitesse du zoom
+    }, 2000); //Vitesse du zoom (ms)
 }
 
 function closeNav() {
