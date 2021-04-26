@@ -598,7 +598,7 @@ function closeNav() {
 function flyToVille(currentFeature) {
     map.flyTo({
       center: currentFeature.geometry.coordinates,
-      zoom: 12
+      zoom: 11
     });
 	openNav();
 }
