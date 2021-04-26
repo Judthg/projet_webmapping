@@ -180,6 +180,12 @@ function construireLocationList(data) {
     link.innerHTML = propri.tico;
 
     /* Add details to the individual listing. */
+    var info = listingim.appendChild(document.createElement('div'));
+    info.className = 'info';
+    
+    var details = info.appendChild(document.createElement('div'));
+    details.innerHTML = propri.commune;
+    details.className = 'contenu';
     /*var details = listing.appendChild(document.createElement('div'));
     details.innerHTML = prop.city;
     if (prop.phone) {
