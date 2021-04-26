@@ -177,7 +177,7 @@ function construireLocationList(data) {
     link.href = '#';
     link.className = 'title';
     link.id = "link-" + propri.id;
-    link.innerHTML = propri.name;
+    link.innerHTML = propri.tico;
 
     /* Add details to the individual listing. */
     /*var details = listing.appendChild(document.createElement('div'));
@@ -573,9 +573,12 @@ function openNav() {
     setTimeout(function() {
         document.getElementById("mySidebar2").style.width = "25%";
         //document.getElementById("main").style.marginLeft = "250px";
-        var zoomedMusees = map.queryRenderedFeatures(null, { layers: ['musees'] });
-        console.log(zoomedMusees);
-        construireLocationList(zoomedMusees);
+
+        var zoomedMonuments = map.queryRenderedFeatures(null, { layers: ['immeubles'] });
+        console.log(zoomedMonuments);
+
+        construireLocationList(zoomedMonuments); // on applique la fonction qui fait appel à la liste des monuments
+
     }, 2000); //Vitesse du zoom
 }
 
