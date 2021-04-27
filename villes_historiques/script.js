@@ -581,7 +581,7 @@ function openNav() {
         //document.getElementById("main").style.marginLeft = "250px";
 
         var zoomedMonuments = map.queryRenderedFeatures(null, { layers: ['immeubles'] });
-        console.log(zoomedMonuments);
+        //console.log(zoomedMonuments);
 
         construireLocationList(zoomedMonuments); // on applique la fonction qui fait appel à la liste des monuments
 		
@@ -595,7 +595,7 @@ document.addEventListener('mousedown', e => {
 document.addEventListener('mousemove', function maj() {
          if (isDrawing === true) {
         var zoomedMonuments = map.queryRenderedFeatures(null, { layers: ['immeubles'] });
-        console.log(zoomedMonuments);
+        //console.log(zoomedMonuments);
 
         construireLocationList(zoomedMonuments);
 		}
