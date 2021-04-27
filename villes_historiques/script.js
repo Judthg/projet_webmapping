@@ -576,7 +576,7 @@ map.on('mousemove', function(e) {
 // Sidebar 2 (apparait au clic)
 function openNav() {
 
-    setTimeout(function() {
+    setTimeout(function maj() {
         document.getElementById("mySidebar2").style.width = "25%";
         //document.getElementById("main").style.marginLeft = "250px";
 
@@ -584,9 +584,30 @@ function openNav() {
         console.log(zoomedMonuments);
 
         construireLocationList(zoomedMonuments); // on applique la fonction qui fait appel à la liste des monuments
-
+		
     }, 3500); //Vitesse du zoom (ms)
 }
+
+isDrawing = false;
+document.addEventListener('mousedown', e => {
+  isDrawing = true;
+});
+document.addEventListener('mousemove', function maj() {
+         if (isDrawing === true) {
+        var zoomedMonuments = map.queryRenderedFeatures(null, { layers: ['immeubles'] });
+        console.log(zoomedMonuments);
+
+        construireLocationList(zoomedMonuments);
+		}
+});
+/*document.addEventListener("mousemove",function maj() {
+        
+        var zoomedMonuments = map.queryRenderedFeatures(null, { layers: ['immeubles'] });
+        console.log(zoomedMonuments);
+
+        construireLocationList(zoomedMonuments);
+})*/
+
 
 function closeNav() {
   document.getElementById("mySidebar2").style.width = "0";
