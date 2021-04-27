@@ -336,7 +336,7 @@ map.on('load', function () {
         'id': 'toilette',
         'type': 'symbol',
         'source': 'toilette',
-        'layout': {"icon-image": "toilette", "icon-size": 0.06,'visibility': 'none'},
+        'layout': {"icon-image": "toilette", "icon-size": 0.02,'visibility': 'none'},
 		'minzoom': 11
     });
 
@@ -352,7 +352,7 @@ map.on('load', function () {
         'id': 'restaurants',
         'type': 'symbol',
         'source': 'restaurants',
-        'layout': {"icon-image": "restaurants", "icon-size": 0.03,'visibility': 'none'},
+        'layout': {"icon-image": "restaurants", "icon-size": 0.02,'visibility': 'none'},
         'minzoom': 11
     });
 
@@ -368,7 +368,7 @@ map.on('load', function () {
         'id': 'hotels',
         'type': 'symbol',
         'source': 'hotels',
-        'layout': {"icon-image": "hotels", "icon-size": 0.05,'visibility': 'none'},
+        'layout': {"icon-image": "hotels", "icon-size": 0.02,'visibility': 'none'},
         'minzoom': 11
     });
 	
