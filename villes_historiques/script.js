@@ -304,7 +304,7 @@ map.on('load', function () {
         'id': 'musees',
         'type': 'symbol',
         'source': 'musees',
-        'layout': { "icon-image": "musee", "icon-size": 0.2, 'visibility': 'visible'},
+        'layout': { "icon-image": "musee", "icon-size": 0.15, 'visibility': 'visible'},
 		'minzoom': 11
     });
     
