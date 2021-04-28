@@ -1813,3 +1813,269 @@ ul.icons {
 
 	}
 
+/* Carte */
+
+.carte{
+	height: 60em;
+	background-color: #F3F3F3;
+}
+
+* {
+    /*-webkit-box-sizing: border-box;*/
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: #404040;
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 20px 2px;
+  }
+
+  a {
+    color: #404040;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #101010;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  .map {
+    position: absolute;
+    left: 25%;
+    width: 75%;
+    top: 0;
+    bottom: 0;
+  }
+
+  .heading {
+    background: #2e3842;
+    border-bottom: 1px solid #eee;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 10px;
+    opacity: 90%;
+  }
+  
+  .heading h1 {
+      font-size: 22px;
+      font-weight: bold;
+      color: #F3F3F3;
+  }
+  
+  @media screen and (max-width:70em){
+      .heading h1{
+          font-size: 22px;
+      }
+  }
+  
+  @media screen and (max-width:70em){
+      .heading {
+          height: 80px;
+      }
+  }
+
+  .listings {
+    height: 100%;
+    /*overflow: auto;*/
+    padding-bottom: 60px;
+  }
+  
+  .listings .item {
+    display: flow;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .listings .item:last-child { border-bottom: none; }
+  
+  .listings .item .title {
+    display: block;
+    color: #000000;
+    font-weight: 700;
+    
+  }
+  
+  
+  .listings .item .title small { font-weight: 400; }
+  
+  .listings .item.active .title,
+  .listings .item .title:hover { color: #C5C5C5; }
+  
+  .listings .item.active {
+    background-color: #f8f8f8;
+  }
+  
+
+  .listings .item .info .blason {float:right;
+    margin-top:-20px;
+    margin-left:5px;
+  }
+  
+  
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-left: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 0;
+  }
+  
+  .clearfix { display: block; }
+  
+  .clearfix::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+/*Sidebar 2 */
+
+.sidebar2 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f8f8f8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  /*padding-top: 60px;*/
+}
+
+.sidebar2 a {
+  /*padding: 8px 8px 8px 8px;*/
+  text-decoration: none;
+  /*font-size: 25px;*/
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar2 a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar2 .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;    
+  position:absolute; 
+  top:10px; 
+  left:10px; 
+  z-index:1;
+  border-radius: 3px;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+/* personnalisation de la popup hover */
+.Mypopup .mapboxgl-popup-content {
+    background-color: black;
+    color : white;
+    opacity : 0.7;
+}
+.Mypopup .mapboxgl-popup-tip {
+    border-top-color: black;
+    opacity: 0.7;
+}
+
+/* personnalisation de la popup hover v2 */
+.Mypopup2 .mapboxgl-popup-content {
+    background-color: pink;
+    color : black;
+    opacity : 0.8;
+}
+.Mypopup2 .mapboxgl-popup-tip {
+    border-top-color: pink;
+    opacity: 0.8;
+}
+
+/* bouton retour au zoom initial */
+#fly {
+	display: block;
+	position: absolute;
+	margin: 0px auto;
+	width: 15%;
+	height: 30px;
+	padding: 5px;
+	border: none;
+	border-radius: 3px;
+	font-size: 12px;
+	text-align: center;
+	color: #F3F3F3;
+	background: #2e3842;
+    right: 30%;
+}
+ @media screen and (max-width:70em){
+      #fly {
+          font-size: 11px;
+          height: 40px;
+      }
+  }
+/* menu gestionnaire des couches */
+.menu {
+     position: absolute;
+     top: 10px;
+     /*left: 85%;*/
+     width: 200px;
+     background-color: #2e3842;
+     opacity: 0.8;
+     color: #F3F3F3;
+     /*padding:1;*/
+     right: 5%;
+     font: 12px;
+     padding-left: 10px; 
+     padding-bottom: 4px;
+     padding-top: 4px;
+        }
+
+ 
