@@ -1,3 +1,10 @@
+Texte introduction :
+La Bretagne est une région avec une forte identité culturelle et une histoire dont les traces sont toujours présentes, aussi bien dans la société que dans les villes.
+Si les villes bretonnes répondant au label "Villes et Pays d'Art et d'histoire" sont bien connues à l'échelle nationale car possédant un patrimoine riche et valorisé, d'autres villes bretonnes, moins reconnues ont néamoins un patrimoine varié et une identité forte.
+Ces villes bretonnes, ne possédant pas le label officiel de "Villes d'Art et d'Histoire" mais possédant un patrimoine remarquable constituent le réseau "Villes Historiques de Bretagne".
+Le présent site s'attache à présenter ces villes et leurs richesses, à la fois patrimoniales et de services. L'objectif est de valoriser au niveau touristique ces lieux moins connus de Bretagne mais pourtant si importants dans notre identité culturelle.
+
+* St-Malo :
 St-Malo, la cité corsaire
 La ville occupe une position privilégiée en Bretagne, à la pointe nord de l'Ille-et-Vilaine,
 à proximité du Mont Saint-Michel
