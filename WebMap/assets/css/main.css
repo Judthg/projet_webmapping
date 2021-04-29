@@ -87,7 +87,7 @@ section, summary, time, mark, audio, video {
 	p {
 		margin: 0 0 2em 0;
 	}
-	@media screen and (max-width: 700px) {
+	@media screen and (max-width: 800px) {
 
 			p {
 				font-size: 0.7em;
@@ -295,6 +295,11 @@ section, summary, time, mark, audio, video {
 			.wrapper.style1 header.major p {
 				color: #2b2b2b;
 			}
+
+			
+			
+
+				
 
 			.wrapper.style1 label {
 				color: #ffffff;
@@ -1583,13 +1588,33 @@ body.Saint_pol_2 #page-wrapper {
 
 #titre_table{
 	background-color: #F3F3F3;
+	padding-top: 200px;
+	margin-bottom: 100px;
 }
 
 #titre_table h2{
 	color: #2e3842;
 	margin-right: auto;
-	margin-left: 5%;
+	text-align: center;
 }
+#titre_table span {
+	border-bottom:2px solid #2e3842;
+	padding-bottom: 1em;
+}
+
+@media screen and (max-width: 60em) {
+	#titre_table h2{
+	font-size: 19px;
+	}
+
+}
+@media screen and (max-width: 45em) {
+	#titre_table h2{
+	font-size: 13px;
+	}
+
+}
+
 
 #Master{
 	position: relative;
@@ -1604,9 +1629,15 @@ body.Saint_pol_2 #page-wrapper {
 #Master h2 {
 	color :#2e3842;
 	margin-bottom: 8%;
+	text-align: center;
 
 }
 
+#Master span{
+	border-bottom:2px solid #2e3842;
+	padding-bottom: 1em;
+
+}
 
 
 #desc{
@@ -1837,16 +1868,32 @@ ul.icons {
 
 .Titre_carte{
 	background-color: #F3F3F3;
-	margin-top: 100px;
-	height: 700px;
+	margin-bottom: -175px;
+	height: 100%;
 }
+.Titre_carte h2 {
+	color: #2e3842;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.Titre_carte span {
+	border-bottom:2px solid #2e3842;
+	padding-bottom: 1em;
+}
+
  .carte{
 	 width: 100%;
 	 height: 650px;
 	 background-color: #F3F3F3;
  }
- @media screen and (max-width: 700px) {
+ @media screen and (max-width: 60em) {
 	 .carte{
-		height: 530px;
+		height: 400px;
 	 }
 	}
+
+#partie_carte{
+	background-color: #F3F3F3;
+}
