@@ -874,7 +874,7 @@ section, summary, time, mark, audio, video {
 		top :50px;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: 50px;
+		margin-bottom: 600px;
 		
 	}
 	.major p { position: static;
@@ -889,6 +889,7 @@ section, summary, time, mark, audio, video {
 
 	#partie3{
 		background-color: #F3F3F3;
+		margin-top: 100px;
 	}	
 	#table{
 		background-color: #F3F3F3;
@@ -1563,6 +1564,9 @@ body.Saint_pol_2 #page-wrapper {
 	padding-top: 0;
 }
 
+#titre_table{
+	background-color: #F3F3F3;
+}
 
 #titre_table h2{
 	color: #2e3842;
@@ -1814,4 +1818,13 @@ ul.icons {
 	}
 
 
- 
+.Titre_carte{
+	background-color: #F3F3F3;
+	margin-top: 100px;
+	height: 700px;
+}
+ .carte{
+	 width: 100%;
+	 height: 650px;
+	 background-color: #F3F3F3;
+ }
