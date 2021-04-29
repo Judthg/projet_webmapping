@@ -87,6 +87,14 @@ section, summary, time, mark, audio, video {
 	p {
 		margin: 0 0 2em 0;
 	}
+	@media screen and (max-width: 700px) {
+
+			p {
+				font-size: 0.7em;
+				line-height: 1.4em;
+			}
+
+		}
 
 	h1, h2, h3{
 		color: #2e3842;
@@ -156,6 +164,7 @@ section, summary, time, mark, audio, video {
 		position: relative;
 		top: -0.25em;
 	}
+	
 
 		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
 			border-bottom: solid 2px #fff;
@@ -911,6 +920,14 @@ section, summary, time, mark, audio, video {
 			position: relative;
 			width: calc(33.33333% - 2.5em);
 			margin: 2em 0 0 1.8em;
+		}
+		@media screen and (max-width: 700px) {
+
+			.tiles article {
+				width: calc(33.33333% - 1em);
+				margin: 1.5em 0 0 1em;
+			}
+
 		}
 
 			.tiles article > .image {
@@ -1828,3 +1845,8 @@ ul.icons {
 	 height: 650px;
 	 background-color: #F3F3F3;
  }
+ @media screen and (max-width: 700px) {
+	 .carte{
+		height: 530px;
+	 }
+	}
