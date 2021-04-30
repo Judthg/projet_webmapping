@@ -87,14 +87,28 @@ section, summary, time, mark, audio, video {
 	p {
 		margin: 0 0 2em 0;
 	}
-	@media screen and (max-width: 800px) {
+    
+	@media screen and (max-width: 60em) {
 
 			p {
 				font-size: 0.7em;
 				line-height: 1.4em;
+
 			}
 
 		}
+        
+      
+        
+        
+        	p {
+		margin: 0 0 2em 0;
+	}
+	
+        
+ 
+   
+
 
 	h1, h2, h3{
 		color: #2e3842;
@@ -422,14 +436,20 @@ section, summary, time, mark, audio, video {
 				}
 
 			}
-
-		
+            
+            .desc_villes p {
+                position: static;
+                margin-left: 100px;
+                margin-right: 200px;
+                text-align: center;
+            }
+                
 
 /* Page Wrapper + Menu */
 	
 	@media screen and (max-width: 60em) {
 	#titre_prin {
-		font-size: 15px;
+		font-size: 15px;
 		font-weight: 800;
 	  }
 	}
@@ -888,7 +908,8 @@ section, summary, time, mark, audio, video {
 		top :50px;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: 600px;
+		margin-bottom: 1000px;
+       
 		
 	}
 	.major p { position: static;
@@ -1437,7 +1458,9 @@ body.is-preload #accueil_2:after {
 
 #text_2{
 	background-color: #F3F3F3;
-	height: 800px;
+	height: 400px;
+    position: static;
+    text-align: center;
 }
 
  /* Pour mettre l'image en arrière plan du titre des autres pages */
